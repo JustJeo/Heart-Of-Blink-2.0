@@ -1,0 +1,2 @@
+## Heart Of Blink
+If you're a big fan of the k-pop group Black Pink you'll know that their fans are called "Blinks" and if you think you've got the true heart of a Blink then you'll master this lyric game!
