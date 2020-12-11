@@ -18,6 +18,9 @@ app.get('/songs', (req, res) => {
 app.get('/game', (req, res) => {
   res.render('game');
 });
+app.get('/results', (req, res) => {
+  res.render('results');
+});
 app.get('/highscore', (req, res) => {
   res.render('highScore');
 });
