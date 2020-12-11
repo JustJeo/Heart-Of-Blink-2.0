@@ -1,9 +1,5 @@
-* {
+html {
   background-color: rgba(243, 157, 180, .80);
-}
-
-body {
-  background-color: white;
 }
 
 nav {
@@ -34,4 +30,15 @@ nav a {
 
 nav a:hover {
   color: silver;
+}
+
+.logo {
+  text-align: center;
+  padding: 5px;
+}
+
+.underLogo {
+  border: solid 5px black;
+  padding: 15px;
+  background-color: white;
 }
