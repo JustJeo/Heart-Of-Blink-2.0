@@ -8,17 +8,17 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      id: {
+      scoreId: {
+        type: Sequelize.INTEGER
+      },
+      score: {
         type: Sequelize.INTEGER
       },
       songId: {
         type: Sequelize.INTEGER
       },
-      name: {
+      playerName: {
         type: Sequelize.STRING
-      },
-      score: {
-        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
