@@ -9,8 +9,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(__dirname + "/public"));
 app.use(layouts);
 
-app.get("/", function(req, res) {
-  res.send("Hello World!")
+app.get("/", (req, res) => {
+  res.render("index")
+});
+app.get('/songs', (req, res) => {
+  res.render('songs');
+});
+app.get('/game', (req, res) => {
+  res.render('game');
+});
+app.get('/highscore', (req, res) => {
+  res.render('highScore');
 });
 
 const server = app.listen(2500);

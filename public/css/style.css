@@ -1,0 +1,44 @@
+html {
+  background-color: rgba(243, 157, 180, .80);
+}
+
+nav {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li {
+  list-style-type: none;
+  padding: 0 10px;
+  background-color: black;
+}
+
+nav ul {
+  display: flex;
+  background-color: black;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+  background-color: black;
+}
+
+nav a:hover {
+  color: silver;
+}
+
+.logo {
+  text-align: center;
+  padding: 5px;
+}
+
+.underLogo {
+  border: solid 5px black;
+  padding: 15px;
+  background-color: white;
+}
