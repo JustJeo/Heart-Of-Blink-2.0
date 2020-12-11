@@ -11,14 +11,14 @@ module.exports = {
       scoreId: {
         type: Sequelize.INTEGER
       },
-      score: {
-        type: Sequelize.INTEGER
-      },
-      songId: {
+      scoreTotal: {
         type: Sequelize.INTEGER
       },
       playerName: {
         type: Sequelize.STRING
+      },
+      songId: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

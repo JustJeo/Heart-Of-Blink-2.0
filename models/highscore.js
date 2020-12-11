@@ -15,9 +15,9 @@ module.exports = (sequelize, DataTypes) => {
   };
   highScore.init({
     scoreId: DataTypes.INTEGER,
-    score: DataTypes.INTEGER,
-    songId: DataTypes.INTEGER,
-    playerName: DataTypes.STRING
+    scoreTotal: DataTypes.INTEGER,
+    playerName: DataTypes.STRING,
+    songId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'highScore',

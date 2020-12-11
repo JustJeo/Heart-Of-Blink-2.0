@@ -1,11 +1,10 @@
 {
   "development": {
-    "database": "heartOfBlink",
+    "database": "heart_of_blink",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
