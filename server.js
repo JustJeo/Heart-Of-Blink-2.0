@@ -1,7 +1,9 @@
+// Require Statements
 const express = require("express");
 const layouts = require("express-ejs-layouts");
 const app = express();
 
+// Middleware
 app.set("view engine", "ejs");
 
 app.use(express.json());
@@ -18,10 +20,13 @@ app.get('/songs', (req, res) => {
 app.get('/game', (req, res) => {
   res.render('game');
 });
+app.get('/results', (req, res) => {
+  res.render('results');
+});
 app.get('/highscore', (req, res) => {
   res.render('highScore');
 });
 
-const server = app.listen(2500);
+app.listen(2500);
 
-module.exports = server
+module.exports
