@@ -11,11 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      models.album.hasMany(models.song)
+      models.album.hasMany(models.song, {through: "album_song"})
     }
   };
   album.init({
-    albumId: DataTypes.INTEGER,
     albumName: DataTypes.STRING,
     coverArt: DataTypes.STRING
   }, {
