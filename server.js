@@ -21,7 +21,10 @@ app.use(methodOverride("_method"));
 // Get all albums
 app.get("/", (req, res) => {
   // const albums = fs.readFileSync()
-  res.render("home", { albums: albumData })
+  db.albums.findAll().then(function(album) {
+    console.log(album)
+  })
+  res.render("home")
 });
 // Get all songs
 app.get('/songs', (req, res) => {

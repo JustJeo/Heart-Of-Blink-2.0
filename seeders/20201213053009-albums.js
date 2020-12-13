@@ -2,6 +2,8 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
+    await queryInterface.bulkDelete('albums', null, { truncate: true, cascade: true, restartIdentity: true });
+
     const bulkAlbums = await queryInterface.bulkInsert("albums", [
       {
         "albumName": "Square One",

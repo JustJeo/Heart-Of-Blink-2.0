@@ -2,6 +2,8 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
+    await queryInterface.bulkDelete('songs', null, { truncate: true, cascade: true, restartIdentity: true });
+
     const bulkSongs = await queryInterface.bulkInsert("songs", [
       {
         "songTitle": "Whistle",
