@@ -17,6 +17,15 @@
       <li><span>Answers</span></li>
     </ul>
   </div>
+  <div class = "albums">
+    <h2>Click to see songs</h2>
+    <ul>
+      <% for (let i = 0; i < albums.length; i++) { %>
+        <li><%= albums[i].name %></li>
+      <% } %>
+    </ul>
+  </div>
 </div>
 
-<!-- TODO: Add cover art to "Album Table" to pull and display under "How The Game Works" -->
+<!-- TODO: Add data to "Album Table" to pull and display under "How The Game Works" -->
+<!-- Display The Album Name and Cover Art stored in the database -->
