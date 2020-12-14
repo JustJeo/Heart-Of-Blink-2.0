@@ -22,8 +22,6 @@
     <ul>
       <% for(let i = 0; i < albumName.length; i++) { %>
         <li><%= albumName[i].dataValues.albumName %></li>
-      <% } %>
-      <% for(let i = 0; i < albumName.length; i++) { %>
         <li><img src = "<%- albumName[i].dataValues.coverArt %>"></li>
       <% } %>
     </ul>

@@ -8,10 +8,6 @@ img {
   width: 200px;
 }
 
-li {
-  list-style-type: none;
-}
-
 nav {
   background-color: black;
   color: white;
@@ -51,4 +47,13 @@ nav a:hover {
   border: solid 5px black;
   padding: 15px;
   background-color: white;
+}
+
+/* .albums ul {
+  display: flex;
+  width: 70%;
+} */
+
+.albums li {
+  list-style-type: none;
 }

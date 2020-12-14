@@ -32,7 +32,9 @@
 
 <h3>This is not hard coded</h3>
 <ul>
-  <% for (let i = 0; i < songName.length; i++) { %>
-    <li><%= songName %></li>
+  <% for (let i = 0; i < songs.length; i++) { %>
+    <li><%= songs[i].songTitle %></li>
+    <li><%= songs[i].albumId %></li>
   <% } %>
+  <h3><%= album.albumName %> </h3>
 </ul>

@@ -35,10 +35,27 @@ app.get("/", (req, res) => {
 });
 // Get all songs
 app.get('/songs', (req, res) => {
-  db.song.findAll().then(returnedSong => {
-    console.log(" -------------- Songs WORK!!! --------------")
-    console.log(returnedSong)
-    res.render('songs', {songName: returnedSong[1].songTitle});
+  db.song.findAll({
+    where: {
+      albumId: 1
+    }
+  }).then(returnedSongs => {
+    console.log(returnedSongs)
+    // returnedAlbum.song.forEach(function(returnedSongs) {
+    //   console.log(" -------------- Songs WORK!!! --------------")
+    //   console.log(returnedSongs)
+    //   console.log(returnedAlbums)
+
+    // console.log(returnedSong)
+    db.album.findByPk(1, {
+      // { include: [db.song] }
+    }).then(returnedAlbum => {
+      console.log(returnedAlbum)
+      res.render('songs', {
+        songs: returnedSongs,
+        album: returnedAlbum
+      })
+    });
   })
 });
 // Get one game
