@@ -1,5 +1,15 @@
 html {
   background-color: rgba(243, 157, 180, .80);
+  width: 80%;
+  margin: 0 auto;
+}
+
+img {
+  width: 200px;
+}
+
+li {
+  list-style-type: none;
 }
 
 nav {

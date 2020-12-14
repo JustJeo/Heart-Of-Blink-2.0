@@ -2,6 +2,7 @@
 <h1>Choose A Song!</h1>
 
 <!-- Dummy code that will be filled later-->
+<h3>This is all hard coded</h3>
 <div class = "songCard">
   <p><span>Song Title:</span> "Kill This Love"</p>
   <p><span>Album Name:</span> "Kill This Love"</p>
@@ -29,3 +30,9 @@
 
 <!-- TODO: Create cards to display a song's name and the album title -->
 
+<h3>This is not hard coded</h3>
+<ul>
+  <% for (let i = 0; i < songName.length; i++) { %>
+    <li><%= songName %></li>
+  <% } %>
+</ul>

@@ -22,19 +22,24 @@ app.use(methodOverride("_method"));
 // Get all albums
 app.get("/", (req, res) => {
   // const albums = fs.readFileSync()
-  db.album.findAll().then(returnedAlbum => {
-    console.log( "----------------WORK!!!! -----------")
-      // albums.forEach(function(album) {
-        console.log(returnedAlbum[0].dataValues.albumName)
-        res.render("home", {albumName: returnedAlbum[0].dataValues.albumName})
-    // console.log(returnedAlbums)
-    // return res.json({album: returnedAlbums})
-    // console.log(albums)
+  db.album
+    .findAll()
+      .then(returnedAlbum => {
+        console.log( "----------------Albums WORK!!!! -----------")
+        // albums.forEach(function(album) {
+        console.log(returnedAlbum)
+        res.render("home", {
+      albumName: returnedAlbum
+    })
   })
 });
 // Get all songs
 app.get('/songs', (req, res) => {
-  res.render('songs');
+  db.song.findAll().then(returnedSong => {
+    console.log(" -------------- Songs WORK!!! --------------")
+    console.log(returnedSong)
+    res.render('songs', {songName: returnedSong[1].songTitle});
+  })
 });
 // Get one game
 app.get('/game', (req, res) => {

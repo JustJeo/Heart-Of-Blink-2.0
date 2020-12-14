@@ -20,10 +20,15 @@
   <div class = "albums">
     <h2>Click to see album</h2>
     <ul>
-        <li><%= albumName %></li>
+      <% for(let i = 0; i < albumName.length; i++) { %>
+        <li><%= albumName[i].dataValues.albumName %></li>
+      <% } %>
+      <% for(let i = 0; i < albumName.length; i++) { %>
+        <li><img src = "<%- albumName[i].dataValues.coverArt %>"></li>
+      <% } %>
     </ul>
   </div>
 </div>
 
 <!-- TODO: Add data to "Album Table" to pull and display under "How The Game Works" -->
-<!-- Display The Album Name and Cover Art stored in the database -->
+<!-- Display ALL Album Names and Cover Arts stored in the database -->
