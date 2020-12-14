@@ -5,7 +5,8 @@ const methodOverride = require("method-override");
 // const fs = require("fs")
 const app = express();
 
-const db = require("./models")
+const db = require("./models");
+const album = require("./models/album");
 
 // Middleware
 app.set("view engine", "ejs");
@@ -21,10 +22,15 @@ app.use(methodOverride("_method"));
 // Get all albums
 app.get("/", (req, res) => {
   // const albums = fs.readFileSync()
-  db.albums.findAll().then(function(album) {
-    console.log(album)
+  db.album.findAll().then(returnedAlbum => {
+    console.log( "----------------WORK!!!! -----------")
+      // albums.forEach(function(album) {
+        console.log(returnedAlbum[0].dataValues.albumName)
+        res.render("home", {albumName: returnedAlbum[0].dataValues.albumName})
+    // console.log(returnedAlbums)
+    // return res.json({album: returnedAlbums})
+    // console.log(albums)
   })
-  res.render("home")
 });
 // Get all songs
 app.get('/songs', (req, res) => {
