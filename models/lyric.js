@@ -11,11 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      models.lyric.belongsTo(models.song, {through: "song_lyric"})
+      models.lyric.belongsTo(models.song)
     }
   };
   lyric.init({
-    lyricQuestion: DataTypes.STRING,
+    questionMessage: DataTypes.STRING,
     songId: DataTypes.INTEGER
   }, {
     sequelize,

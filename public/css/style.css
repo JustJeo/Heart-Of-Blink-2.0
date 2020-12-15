@@ -2,6 +2,7 @@ html {
   background-color: rgba(243, 157, 180, .80);
   width: 80%;
   margin: 0 auto;
+  text-align: center;
 }
 
 img {
@@ -47,6 +48,7 @@ nav a:hover {
   border: solid 5px black;
   padding: 15px;
   background-color: white;
+  text-align: justify;
 }
 
 /* .albums ul {
@@ -61,8 +63,13 @@ nav a:hover {
 .songCard {
   background-color: white;
   display: inline-block;
+  text-align: center;
   padding: 15px;
   margin: 10px;
   border: solid 3px black;
+}
+
+.songForm {
+  background-color: white;
   align-items: center;
 }

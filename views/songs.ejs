@@ -1,15 +1,12 @@
 <!-- Songs List Page -->
 <h1>Choose A Song!</h1>
 
-<h3>This is not hard coded</h3>
-
 <% for (let j = 0; j < songs.length; j++) {%>
   <div class = "songCard">
+    <img src = "<%- album[songs[j].albumId-1].coverArt %>" />
     <p><span>Song Title:</span> "<%= songs[j].songTitle %>"</p>
-    <p><span>Album Name:</span> "<%= album[1].albumName %>"</p>
-    <p><span>Album Id:</span> "<%= songs[j].albumId %>"</p>
     <p><span>Album Name:</span> "<%= album[songs[j].albumId-1].albumName %>"</p>
-    <button>Play Song</button>
-    <button>High Scores</button>
+    <a href="/game/<%- songs[j].id %>"><button>Play Song</button></a>
+    <a href="/highscore/<%- songs[j].id %>"><button>High Scores</button></a>
   </div>
 <% } %>
