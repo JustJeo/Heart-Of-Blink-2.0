@@ -26,13 +26,12 @@ app.get("/", (req, res) => {
     .findAll()
       .then(returnedAlbum => {
         console.log( "----------------Albums WORK!!!! -----------")
-        // albums.forEach(function(album) {
-        console.log(returnedAlbum)
         res.render("home", {
       albumName: returnedAlbum
     })
   })
 });
+
 // Get all songs
 app.get('/songs', (req, res) => {
   db.song.findAll({
@@ -40,7 +39,7 @@ app.get('/songs', (req, res) => {
     //   albumId: 1
     // }
   }).then(returnedSongs => {
-    console.log(returnedSongs)
+    console.log("------------- SONGS PAGE!!! --------------")
     db.album.findAll({
       // { include: [db.song] }
     }).then(returnedAlbum => {
@@ -51,14 +50,25 @@ app.get('/songs', (req, res) => {
     });
   })
 });
+
 // Get one game
 app.get('/game', (req, res) => {
-  res.render('game');
+  db.lyric
+    .findAll()
+      .then(returnedLyrics => {
+        console.log("--------- GET QUESTIONS!!!! -------------")
+        console.log(returnedLyrics)
+        res.render('game', {
+      lyric: returnedLyrics
+    });
+  })
 });
+
 // Get one score
 app.get('/results', (req, res) => {
   res.render('results');
 });
+
 // Get all scores
 app.get('/highscore', (req, res) => {
   res.render('highScore');

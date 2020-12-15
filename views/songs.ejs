@@ -6,7 +6,9 @@
     <img src = "<%- album[songs[j].albumId-1].coverArt %>" />
     <p><span>Song Title:</span> "<%= songs[j].songTitle %>"</p>
     <p><span>Album Name:</span> "<%= album[songs[j].albumId-1].albumName %>"</p>
-    <button>Play Song</button>
+    <form action="/game" class = "inline">
+      <button>Play Song</button>
+    </form>
     <button>High Scores</button>
   </div>
 <% } %>

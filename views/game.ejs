@@ -1,30 +1,8 @@
 <!-- This is where the game play will occur -->
 <h1>Do you have the heart of a Blink?</h1>
 
-<!-- Game Interface -->
-<div class = "gameHUD">
-  <p>Current Score = 0</p>
-  <p>Timer = 60s</p>
-</div>
+<h3>Answer the 10 questions below and see how you did!</h3>
 
-<!-- Game Declarations -->
-<% let timer = 60 %>
-<% let score = 0 %>
-<% let highscore = 0 %>
-
-<!-- Timer Count Down -->
-<% function timeBegin() { %>
-  <% const timeInterval = setInterval(() => {
-    if (timer === 0) {
-      game.highscoreCheck()
-      clearInterval(timeInterval)
-    } else {
-      timer--
-      console.log(timer)
-    }
-  }, 1000)
-<% } %>
-
-<!-- Game Playing Field -->
-
-<!-- TODO: Create file of questions -->
+<ul>
+    <li><%= lyric[1].questionMessage %></li>
+</ul>
