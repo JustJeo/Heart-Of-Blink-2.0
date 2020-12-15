@@ -36,21 +36,14 @@ app.get("/", (req, res) => {
 // Get all songs
 app.get('/songs', (req, res) => {
   db.song.findAll({
-    where: {
-      albumId: 1
-    }
+    // where: {
+    //   albumId: 1
+    // }
   }).then(returnedSongs => {
     console.log(returnedSongs)
-    // returnedAlbum.song.forEach(function(returnedSongs) {
-    //   console.log(" -------------- Songs WORK!!! --------------")
-    //   console.log(returnedSongs)
-    //   console.log(returnedAlbums)
-
-    // console.log(returnedSong)
-    db.album.findByPk(1, {
+    db.album.findAll({
       // { include: [db.song] }
     }).then(returnedAlbum => {
-      console.log(returnedAlbum)
       res.render('songs', {
         songs: returnedSongs,
         album: returnedAlbum
