@@ -7,6 +7,24 @@
   <p>Timer = 60s</p>
 </div>
 
+<!-- Game Declarations -->
+<% let timer = 60 %>
+<% let score = 0 %>
+<% let highscore = 0 %>
+
+<!-- Timer Count Down -->
+<% function timeBegin() { %>
+  <% const timeInterval = setInterval(() => {
+    if (timer === 0) {
+      game.highscoreCheck()
+      clearInterval(timeInterval)
+    } else {
+      timer--
+      console.log(timer)
+    }
+  }, 1000)
+<% } %>
+
 <!-- Game Playing Field -->
 
-<!-- TODO: Create JSON file of questions -->
+<!-- TODO: Create file of questions -->

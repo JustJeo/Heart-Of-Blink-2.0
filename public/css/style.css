@@ -1,5 +1,11 @@
 html {
   background-color: rgba(243, 157, 180, .80);
+  width: 80%;
+  margin: 0 auto;
+}
+
+img {
+  width: 200px;
 }
 
 nav {
@@ -41,4 +47,22 @@ nav a:hover {
   border: solid 5px black;
   padding: 15px;
   background-color: white;
+}
+
+/* .albums ul {
+  display: flex;
+  width: 70%;
+} */
+
+.albums li {
+  list-style-type: none;
+}
+
+.songCard {
+  background-color: white;
+  display: inline-block;
+  padding: 15px;
+  margin: 10px;
+  border: solid 3px black;
+  align-items: center;
 }
