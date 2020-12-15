@@ -1,12 +1,12 @@
 <!-- This is where the game play will occur -->
 <h1>Do you have the heart of a Blink?</h1>
-<h2>Song: <%=song[1].songTitle %></h2>
+
 
 <h3>Answer the 10 questions below and see how you did!</h3>
 
 <div class="songForm">
   <ol>
-    <% for(let i = 0; i < lyrics.length; i++) { %>
+    <% for(let i = 0; i < 10; i++) { %>
       <li><%= lyrics[i].questionMessage %></li>
       <form id="questionForm" action="/results" method="POST">
         <input id="questionAnswer" type="text">

@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      models.album.belongsToMany(models.song, {through: "album_song"})
+      models.album.hasMany(models.song)
     }
   };
   album.init({

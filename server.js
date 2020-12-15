@@ -42,6 +42,7 @@ app.get('/songs', (req, res) => {
       // }
       .then(returnedSongs => {
         console.log("------------- SONGS PAGE!!! --------------")
+        console.log(returnedSongs[1].id)
         db.album.findAll()
           // { include: [db.song] }
           .then(returnedAlbum => {
@@ -54,22 +55,24 @@ app.get('/songs', (req, res) => {
 });
 
 // Get one game
-app.get('/game', (req, res) => {
+app.get('/game/:id', (req, res) => {
   // const gameData = JSON.parse(lyrics)
-  // // Can you parse over a seeder file?
-  // const gameIndex = parseInt(req.params.id)
-  db.lyric
-    .findAll()
-      .then(returnedLyrics => {
-        console.log(returnedLyrics)
+  // Can you parse over a seeder file?
+  const gameIndex = parseInt(req.params.id)
+  db.song
+    .findOne({
+      where: {
+        id: gameIndex
+      },
+      include: [db.lyric]
+    })
+      .then(returnedSong => {
+        console.log(returnedSong)
         console.log("--------- GET QUESTIONS!!!! -------------")
-        db.song.findAll()
-        .then(returnedSong => {
             res.render('game', {
-              lyrics: returnedLyrics,
+              lyrics: returnedSong.lyrics,
               song: returnedSong
           })
-    });
   })
 });
 
