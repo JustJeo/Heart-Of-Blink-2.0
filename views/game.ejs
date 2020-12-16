@@ -9,7 +9,8 @@
     <% for(let i = 0; i < 10; i++) { %>
       <div>
           <label><%= lyrics[i].questionMessage %></label>
-          <input class = "inputBox" name="<%= lyrics[i].id %>" id="playerAnswer" type="text">
+          <input class = "inputBox" name="lyric<%= lyrics[i].id %>" id="playerAnswer" type="text">
+          <!-- <p> lyrics[i].questionAnswer </p> -->
       </div>  
     <% } %>
     <button type="submit">Submit Answers</button>

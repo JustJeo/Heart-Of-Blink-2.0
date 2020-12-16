@@ -67,12 +67,11 @@ app.get('/game/:id', (req, res) => {
       include: [db.lyric]
     })
       .then(returnedSong => {
-        // console.log(returnedSong)
+        console.log(returnedSong)
         console.log("--------- GET QUESTIONS!!!! -------------")
             res.render('game', {
               lyrics: returnedSong.lyrics,
-              song: returnedSong,
-              answer: returnedSong.lyrics.questionAnswer
+              song: returnedSong
             })
             // answer: req.body === questionAnswer
     })
@@ -81,21 +80,26 @@ app.get('/game/:id', (req, res) => {
 // Get one score
 app.post('/results/:id', (req, res) => {
   const gameIndex = parseInt(req.params.id)
+  console.log(req.body)
   db.song
     .findOne({
       where: {
         id: gameIndex
       },
-      include: [db.highscore]
+      include: [db.highscore],
+      include: [db.lyric]
     })
       .then(returnedSong => {
-        console.log(returnedSong)
-        console.log("----------- GET High Score of ONE SONG!!! ------------")
-        console.log(req.body)
-          res.render('results', {
+        // console.log(returnedSong)
+        console.log("----------- GET Answers of ONE SONG!!! ------------")
+        // console.log(req.body.lyric3)
+        // put in an array?
+          res.render('results', {blink:{
             oneHighscore: returnedSong.highscores,
-            song: returnedSong
-          });
+            song: returnedSong,
+            lyrics: returnedSong.lyrics,
+            playerAnswer: req.body
+          }});
       })
 });
 

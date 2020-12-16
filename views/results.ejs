@@ -1,14 +1,29 @@
-<!-- Victory screen for those who scored 10th place or higher -->
+<!-- After a player hits the "submit" button -->
 <h1>Here's How You Did!</h1>
-<h2>Song: "<%= song.songTitle %>"</h2>
-<h2>Score:</h2>
+<h2>Song: "<%= blink.song.songTitle %>"</h2>
+<!-- <h2>Score:</h2> -->
 
-<div class = "results">
-  <ol>
-    <% for(let i = 0; i < 5; i++) { %>
-      <li><%= oneHighscore[i].playerName %> with <%= oneHighscore[i].score %> points</li>
-    <% } %>
-  </ol>
+<div class="answersList">
+  <% for(let i = 0; i < 10; i++) { %>
+    <div>
+      <label><%= blink.lyrics[i].questionMessage %></label>
+      <p>The correct answer is: <b></b><%= blink.lyrics[i].questionAnswer %></p>
+      <% let answer = `lyric${blink.lyrics[i].id}` %>
+      <p>You entered: <%= blink.playerAnswer[answer] %></p>
+      <% console.log(blink.lyrics[i].id) %>
+    </div>  
+  <% } %>
+    <% console.log("------AAAAAHHHHHHHH--------") %>
+    <%# console.log(blink.lyrics) %>
 </div>
+
+<!-- Stretch Goals -->
+<!-- <div class = "results">
+  <ol>
+    for(let i = 0; i < 5; i++) {
+      <li>oneHighscore[i].playerName with oneHighscore[i].score points</li>
+    }
+  </ol>
+</div> -->
 
 <a href="/songs"><button>Choose Another Song!</button></a>
