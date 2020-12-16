@@ -1,17 +1,18 @@
-<!-- This is where the game play will occur -->
+<!-- Game Play Page -->
 <h1>Do you have the heart of a Blink?</h1>
-
-
 <h3>Answer the 10 questions below and see how you did!</h3>
+<br />
+<h2>Song: "<%= song.songTitle %>"</h2>
 
 <div class="songForm">
-  <ol>
+  <form id="questionForm" action="/results/<%- song.id %>" method="POST">
     <% for(let i = 0; i < 10; i++) { %>
-      <li><%= lyrics[i].questionMessage %></li>
-      <form id="questionForm" action="/results" method="POST">
-        <input id="questionAnswer" type="text">
-      </form>
+      <div>
+          <label><%= lyrics[i].questionMessage %></label>
+          <input class = "inputBox" name="lyric<%= lyrics[i].id %>" id="playerAnswer" type="text">
+          <!-- <p> lyrics[i].questionAnswer </p> -->
+      </div>  
     <% } %>
-  </ol>
-  <button type="submit" form="questionForm ">Submit Answers</button>
+    <button type="submit">Submit Answers</button>
+  </form>
 </div>

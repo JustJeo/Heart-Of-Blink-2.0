@@ -16,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   };
   lyric.init({
     questionMessage: DataTypes.STRING,
+    questionAnswer: DataTypes.STRING,
     songId: DataTypes.INTEGER
   }, {
     sequelize,

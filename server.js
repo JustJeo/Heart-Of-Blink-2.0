@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
       .then(returnedAlbum => {
         console.log( "----------------Albums WORK!!!! -----------")
         res.render("home", {
-          albumName: returnedAlbum
+          album: returnedAlbum
     })
   })
 });
@@ -42,7 +42,7 @@ app.get('/songs', (req, res) => {
       // }
       .then(returnedSongs => {
         console.log("------------- SONGS PAGE!!! --------------")
-        console.log(returnedSongs[1].id)
+        // console.log(returnedSongs[1].id)
         db.album.findAll()
           // { include: [db.song] }
           .then(returnedAlbum => {
@@ -72,18 +72,52 @@ app.get('/game/:id', (req, res) => {
             res.render('game', {
               lyrics: returnedSong.lyrics,
               song: returnedSong
-          })
-  })
+            })
+            // answer: req.body === questionAnswer
+    })
 });
 
 // Get one score
-app.get('/results', (req, res) => {
-  res.render('results');
+app.post('/results/:id', (req, res) => {
+  const gameIndex = parseInt(req.params.id)
+  console.log(req.body)
+  db.song
+    .findOne({
+      where: {
+        id: gameIndex
+      },
+      include: [db.highscore],
+      include: [db.lyric]
+    })
+      .then(returnedSong => {
+        // console.log(returnedSong)
+        console.log("----------- GET Answers of ONE SONG!!! ------------")
+        // console.log(req.body.lyric3)
+        // put in an array?
+          res.render('results', {blink:{
+            oneHighscore: returnedSong.highscores,
+            song: returnedSong,
+            lyrics: returnedSong.lyrics,
+            playerAnswer: req.body
+          }});
+      })
 });
 
 // Get all scores
 app.get('/highscore', (req, res) => {
-  res.render('highScore');
+  db.highscore
+    .findAll()
+      .then(returnedScores => {
+        console.log(returnedScores)
+        console.log("----------- GET High Score of ALL SONGS!!! ------------")
+        db.song.findAll()
+          .then(returnedSong => {
+            res.render('highscore', {
+              scores: returnedScores,
+              song: returnedSong
+            });
+          })
+      })
 });
 
 app.listen(2500, function() {

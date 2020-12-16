@@ -1,5 +1,15 @@
-<!-- This displays the high score! -->
+<!-- Displays the top 3 high scores of every song! -->
+<!-- Taken out for feasibility -->
 <h1>Here's How Other Blinks Scored!</h1>
+
+<% for (let i = 0; i < song.length; i++) { %>
+  <div class = "highscoreCard">
+    <p><span><u>Song Title:</u></span> "<%= song[i].songTitle %>"</p>
+    <ol>
+      <li><%= scores[i].playerName %> with <%= scores[i].score %></li>
+    </ol>
+  </div>
+<% } %>
 
 
 

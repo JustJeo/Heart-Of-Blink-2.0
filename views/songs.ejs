@@ -1,4 +1,4 @@
-<!-- Songs List Page -->
+<!-- All Songs List Page -->
 <h1>Choose A Song!</h1>
 
 <% for (let j = 0; j < songs.length; j++) {%>
@@ -6,7 +6,7 @@
     <img src = "<%- album[songs[j].albumId-1].coverArt %>" />
     <p><span>Song Title:</span> "<%= songs[j].songTitle %>"</p>
     <p><span>Album Name:</span> "<%= album[songs[j].albumId-1].albumName %>"</p>
-    <a href="/game/<%- songs[j].id %>"><button>Play Song</button></a>
-    <a href="/highscore/<%- songs[j].id %>"><button>High Scores</button></a>
+    <a href="/game/<%- songs[j].id %>"><button>Play Game</button></a>
+    <!-- <a href="/results/songs[j].id"><button>High Scores</button></a> -->
   </div>
 <% } %>
