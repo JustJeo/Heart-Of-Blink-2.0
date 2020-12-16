@@ -1,8 +1,13 @@
-<!-- Victory screen for those who scored 10th place or higher -->
+<!-- Results Page -->
 <h1>Here's How You Did!</h1>
+<h2>Song: <%= song.songTitle %></h2>
 
-<!-- If the player made the top 10 then display -->
-<!-- If player === Top 10 then -->
-<p>You made the top 10!</p>
+<div class = "endgameResult">
+  <ol>
+    <% for(let i = 0; i < 1; i++) { %>
+      <li><%= oneHighscore[i].playerName %> with <%= oneHighscore[i].score %> points</li>
+    <% } %>
+  </ol>
+</div>
 
-<!-- TODO: Create prompts for users to enter their name if they place in the Top 10. This is where only the top 10 appear! -->
+<a href="/songs"><button>Choose Another Song!</button></a>

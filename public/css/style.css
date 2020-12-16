@@ -9,6 +9,10 @@ img {
   width: 200px;
 }
 
+span {
+  font-weight: bold;
+}
+
 nav {
   background-color: black;
   color: white;
@@ -58,18 +62,35 @@ nav a:hover {
 
 .albums li {
   list-style-type: none;
+  width: 50%;
 }
 
-.songCard {
+.songCard, .highscoreCard {
   background-color: white;
   display: inline-block;
-  text-align: center;
   padding: 15px;
   margin: 10px;
   border: solid 3px black;
 }
 
+.songCard {
+  text-align: center;
+}
+
+.highscoreCard {
+  text-align: left;
+}
+
 .songForm {
   background-color: white;
   align-items: center;
+  border: solid 3px black;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}
+
+.songForm ul li {
+  display: table-cell;
 }

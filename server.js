@@ -42,7 +42,7 @@ app.get('/songs', (req, res) => {
       // }
       .then(returnedSongs => {
         console.log("------------- SONGS PAGE!!! --------------")
-        console.log(returnedSongs[1].id)
+        // console.log(returnedSongs[1].id)
         db.album.findAll()
           // { include: [db.song] }
           .then(returnedAlbum => {
@@ -72,18 +72,45 @@ app.get('/game/:id', (req, res) => {
             res.render('game', {
               lyrics: returnedSong.lyrics,
               song: returnedSong
-          })
-  })
+            })
+    })
 });
 
 // Get one score
-app.get('/results', (req, res) => {
-  res.render('results');
+app.get('/results/:id', (req, res) => {
+  const gameIndex = parseInt(req.params.id)
+  db.song
+    .findOne({
+      where: {
+        id: gameIndex
+      },
+      include: [db.highscore]
+    })
+      .then(returnedSong => {
+        console.log(returnedSong)
+        console.log("----------- GET High Score of ONE SONG!!! ------------")
+          res.render('results', {
+            oneHighscore: returnedSong.highscores,
+            song: returnedSong
+          });
+      })
 });
 
 // Get all scores
 app.get('/highscore', (req, res) => {
-  res.render('highScore');
+  db.highscore
+    .findAll()
+      .then(returnedScores => {
+        console.log(returnedScores)
+        console.log("----------- GET High Score of ALL SONGS!!! ------------")
+        db.song.findAll()
+          .then(returnedSong => {
+            res.render('highscore', {
+              scores: returnedScores,
+              song: returnedSong
+            });
+          })
+      })
 });
 
 app.listen(2500, function() {
