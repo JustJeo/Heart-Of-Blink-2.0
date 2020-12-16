@@ -1,10 +1,11 @@
-<!-- Results Page -->
+<!-- Victory screen for those who scored 10th place or higher -->
 <h1>Here's How You Did!</h1>
-<h2>Song: <%= song.songTitle %></h2>
+<h2>Song: "<%= song.songTitle %>"</h2>
+<h2>Score:</h2>
 
-<div class = "endgameResult">
+<div class = "results">
   <ol>
-    <% for(let i = 0; i < 1; i++) { %>
+    <% for(let i = 0; i < 5; i++) { %>
       <li><%= oneHighscore[i].playerName %> with <%= oneHighscore[i].score %> points</li>
     <% } %>
   </ol>

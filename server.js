@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
       .then(returnedAlbum => {
         console.log( "----------------Albums WORK!!!! -----------")
         res.render("home", {
-          albumName: returnedAlbum
+          album: returnedAlbum
     })
   })
 });
@@ -67,17 +67,19 @@ app.get('/game/:id', (req, res) => {
       include: [db.lyric]
     })
       .then(returnedSong => {
-        console.log(returnedSong)
+        // console.log(returnedSong)
         console.log("--------- GET QUESTIONS!!!! -------------")
             res.render('game', {
               lyrics: returnedSong.lyrics,
-              song: returnedSong
+              song: returnedSong,
+              answer: returnedSong.lyrics.questionAnswer
             })
+            // answer: req.body === questionAnswer
     })
 });
 
 // Get one score
-app.get('/results/:id', (req, res) => {
+app.post('/results/:id', (req, res) => {
   const gameIndex = parseInt(req.params.id)
   db.song
     .findOne({
@@ -89,6 +91,7 @@ app.get('/results/:id', (req, res) => {
       .then(returnedSong => {
         console.log(returnedSong)
         console.log("----------- GET High Score of ONE SONG!!! ------------")
+        console.log(req.body)
           res.render('results', {
             oneHighscore: returnedSong.highscores,
             song: returnedSong

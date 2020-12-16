@@ -12,17 +12,17 @@
     <h2>Rules</h2>
     <p>Before you play the game, it's best to know the rules!</p>
     <ul>
-      <li><span>Questions</span>All questions will be of English parts of the chosen song.</li>
-      <li><span>Answers</span>All answers are checked using the 26 letters of the English alphabet.</li>
-      <li><span>Points</span>Players will earn 10 points for every right answer and will receive 0 points for every wrong answer.</li>
+      <li><span>Questions: </span>All questions will be of English parts of the chosen song.</li>
+      <li><span>Answers: </span>All answers are checked using the 26 letters of the English alphabet.</li>
+      <li><span>Points: </span>Players will earn 10 points for every right answer and will receive 0 points for every wrong answer.</li>
     </ul>
   </div>
   <div class = "albums">
     <h2>BLACKPINK Albums</h2>
     <ul>
-      <% for(let i = 0; i < albumName.length; i++) { %>
-        <li><%= albumName[i].albumName %></li>
-        <li><img src = "<%- albumName[i].coverArt %>"></li>
+      <% for(let i = 0; i < album.length; i++) { %>
+        <li><%= album[i].albumName %></li>
+        <li><img src = "<%- album[i].coverArt %>"></li>
       <% } %>
     </ul>
   </div>

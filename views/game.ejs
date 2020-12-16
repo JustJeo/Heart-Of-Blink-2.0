@@ -6,12 +6,12 @@
 
 <div class="songForm">
   <form id="questionForm" action="/results/<%- song.id %>" method="POST">
-    <ul>
-      <% for(let i = 0; i < 10; i++) { %>
-        <li><%= lyrics[i].questionMessage %></li>
-          <input id="questionAnswer" type="text">
-      <% } %>
-      </ul>
+    <% for(let i = 0; i < 10; i++) { %>
+      <div>
+          <label><%= lyrics[i].questionMessage %></label>
+          <input class = "inputBox" name="<%= lyrics[i].id %>" id="playerAnswer" type="text">
+      </div>  
+    <% } %>
+    <button type="submit">Submit Answers</button>
   </form>
-  <button type="/submit" form="questionForm ">Submit Answers</button>
 </div>
