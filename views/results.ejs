@@ -1,11 +1,12 @@
 <!-- After a player hits the "submit" button -->
 <h1>Here's How You Did!</h1>
 <h2>Song: "<%= blink.song.songTitle %>"</h2>
+<!-- Stretch Goal -->
 <!-- <h2>Score:</h2> -->
 
 <div class="answersList">
   <% for(let i = 0; i < 10; i++) { %>
-    <div>
+    <div class="answerCard">
       <label><%= blink.lyrics[i].questionMessage %></label>
       <p>The correct answer is: <b></b><%= blink.lyrics[i].questionAnswer %></p>
       <% let answer = `lyric${blink.lyrics[i].id}` %>
@@ -13,8 +14,6 @@
       <% console.log(blink.lyrics[i].id) %>
     </div>  
   <% } %>
-    <% console.log("------AAAAAHHHHHHHH--------") %>
-    <%# console.log(blink.lyrics) %>
 </div>
 
 <!-- Stretch Goals -->
@@ -26,4 +25,4 @@
   </ol>
 </div> -->
 
-<a href="/songs"><button>Choose Another Song!</button></a>
+<a href="/songs"><button class="btn btn-dark">Choose Another Song!</button></a>
