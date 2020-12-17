@@ -1,5 +1,9 @@
 # Heart Of Blink
-If you're a big fan of the k-pop group Black Pink you'll know that their fans are called "Blinks" and if you think you've got the true heart of a Blink then you'll master this lyric game!
+If you're a big fan of the k-pop group BLACKPINK you'll know that their fans are called "Blinks" and if you think you've got the true heart of a Blink then you'll master this lyric game! The game is fill-in-the-blank style and players will have to answer 10 questions of lyrics. The clues of lyrics are from parts of the song that are sung in English or Korean lyrics written as romanticized Korean using the English alphabet, but the answer that the player will want to match is an English word.
+
+In this 1.0 version of the game, not all songs are complete and ready to be played...yet. With practicality in mind, doing a game for every single song the group released, within the span of a week, wasn't do-able, but a majority of the group's mainstream songs are available to play!
+
+If you think you've got a Heart of Blink and know BLACKPINK's songs 100%, put your knowledge to the test so you can finally shout "There's a Blink in your area!"
 
 ![HomePage](public/images/HomePage.png)
 
@@ -12,6 +16,9 @@ If you're a big fan of the k-pop group Black Pink you'll know that their fans ar
 - As a user, I want to be able to see all of the correct answers to the questions.
 - As a user, I want to be able to see all of the answers I entered into the blank.
 - As a user, I want to be able to be taken to the full song list by pressing the "choose another song" button at the bottom of the answers page.
+
+## Motivation
+For the final project of my bootcamp cohort, I knew I wanted to build a game. Though it wasn't my original plan, I knew that deep down, it was what I wanted to do. My love for k-pop was also a big factor in my decision making process. I have been a fan of Korean pop music (K-pop) for over 7 years now and with its publicity increasing in 2020, I found this as the perfect time to build a game that includes one of the biggest K-Pop groups known in America. Even though BLACKPINK is not my absolute favorite K-pop group, I knew that if I wanted to do a game about lyrics, it had to be a group that had many English lines in their songs. With 3/4 members of BLACKPINK fluent in English and have lived abroad before becoming musicians, they were a no brainer with which group to choose for this project.
 
 ## Technologies Used
 - Postgres
@@ -34,9 +41,6 @@ This code shows the "results.ejs" file and how the lyric question is displayed f
 This code shows the backend of the application, specifically the route that gets one game based on the index of the song the player has chosen.
 
 ![GetOneGame](public/images/GetOneGame.png)
-
-## Motivation
-For the final project of my bootcamp cohort, I knew I wanted to build a game. Though it wasn't my original plan, I knew that deep down, it was what I wanted to do. My love for k-pop was also a big factor in my decision making process. I have been a fan of Korean pop music (K-pop) for over 7 years now and with its publicity increasing in 2020, I found this as the perfect time to build a game that includes one of the biggest K-Pop groups known in America. Even though BLACKPINK is not my absolute favorite K-pop group, I knew that if I wanted to do a game about lyrics, it had to be a group that had many English lines in their songs. With 3/4 members of BLACKPINK fluent in English and have lived abroad before becoming musicians, they were a no brainer with which group to choose for this project.
 
 ## Personal Takeaways
 If this solo, final project has taught me anything, it's that learning both front-end and back-end is super important for a career in the tech industry. I, personally, identify as a front-end developer so when this project was announced as a full stack, solo project, I dreaded it. I knew that I wasn't confident at back-end work, but I knew I had to try. I knew that in the end of it all, after this cohort, and when the job search in the tech industry truly begins, being able to work with both front-end and back-end is like having a super power. I made sure to reach out to instructors and TA's for any help if I were absolutely stuck on a problem. I also asked my classmates to see if they could share any knowledge with me. Completing this project made me more confident with the back-end and connecting it forward to my specialty.
