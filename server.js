@@ -22,7 +22,6 @@ app.use(methodOverride("_method"));
 // Routes
 // Get all albums
 app.get("/", (req, res) => {
-  // const albums = fs.readFileSync()
   db.album
     .findAll()
       .then(returnedAlbum => {
@@ -42,7 +41,6 @@ app.get('/songs', (req, res) => {
       // }
       .then(returnedSongs => {
         console.log("------------- SONGS PAGE!!! --------------")
-        // console.log(returnedSongs[1].id)
         db.album.findAll()
           // { include: [db.song] }
           .then(returnedAlbum => {
@@ -56,8 +54,6 @@ app.get('/songs', (req, res) => {
 
 // Get one game
 app.get('/game/:id', (req, res) => {
-  // const gameData = JSON.parse(lyrics)
-  // Can you parse over a seeder file?
   const gameIndex = parseInt(req.params.id)
   db.song
     .findOne({
@@ -67,20 +63,17 @@ app.get('/game/:id', (req, res) => {
       include: [db.lyric]
     })
       .then(returnedSong => {
-        console.log(returnedSong)
-        console.log("--------- GET QUESTIONS!!!! -------------")
+        console.log("---------- GET QUESTIONS!!!! ----------")
             res.render('game', {
               lyrics: returnedSong.lyrics,
               song: returnedSong
             })
-            // answer: req.body === questionAnswer
     })
 });
 
 // Get one score
 app.post('/results/:id', (req, res) => {
   const gameIndex = parseInt(req.params.id)
-  console.log(req.body)
   db.song
     .findOne({
       where: {
@@ -90,10 +83,7 @@ app.post('/results/:id', (req, res) => {
       include: [db.lyric]
     })
       .then(returnedSong => {
-        // console.log(returnedSong)
         console.log("----------- GET Answers of ONE SONG!!! ------------")
-        // console.log(req.body.lyric3)
-        // put in an array?
           res.render('results', {blink:{
             oneHighscore: returnedSong.highscores,
             song: returnedSong,
