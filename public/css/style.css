@@ -124,6 +124,8 @@ nav a:hover {
 
 .questions {
   padding: 10px;
+  align-items: center;
+  text-align: justify;
 }
 
 .results {
@@ -144,4 +146,42 @@ nav a:hover {
   padding: 15px;
   margin: 10px;
   border: solid 3px black;
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 1500px) {
+  .logo img, .pickImg img {
+    text-align: center;
+    padding: 5px;
+    width: 400px;
+  }
+
+  img {
+    width: 200px;
+    padding: 10px;
+  }
+  .questions {
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .logo img, .pickImg img {
+    text-align: center;
+    padding: 5px;
+    width: 300px;
+  }
+
+  img {
+    width: 250px;
+    padding: 10px;
+  }
+
+  .questions {
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
 }
