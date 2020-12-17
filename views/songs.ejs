@@ -1,12 +1,15 @@
 <!-- All Songs List Page -->
-<h1>Choose A Song!</h1>
+<div class = "pickImg">
+  <img src = "https://fontmeme.com/permalink/201217/dce556b5d26d6383462809087de710f6.png" alt="Pick A Song using logo font">
+</div>
 
 <% for (let j = 0; j < songs.length; j++) {%>
   <div class = "songCard">
     <img src = "<%- album[songs[j].albumId-1].coverArt %>" />
     <p><span>Song Title:</span> "<%= songs[j].songTitle %>"</p>
     <p><span>Album Name:</span> "<%= album[songs[j].albumId-1].albumName %>"</p>
-    <a href="/game/<%- songs[j].id %>"><button>Play Game</button></a>
+    <a href="/game/<%- songs[j].id %>"><button type="button" class="btn btn-dark">Play Game</button></a>
     <!-- <a href="/results/songs[j].id"><button>High Scores</button></a> -->
   </div>
 <% } %>
+

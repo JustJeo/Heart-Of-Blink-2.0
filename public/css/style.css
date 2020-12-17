@@ -1,16 +1,25 @@
-html {
+* {
+  font-family: 'Work Sans', sans-serif;
+  /* font-family: Helvetica, Arial, sans-serif; */
+}
+
+body {
   background-color: rgba(243, 157, 180, .80);
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   text-align: center;
+  padding: 10px;
+  font-weight: 700;
 }
 
 img {
-  width: 200px;
+  width: 300px;
+  padding: 10px;
 }
 
 span {
-  font-weight: bold;
+  font-size: 1.25em;
+  font-weight: bolder;
 }
 
 nav {
@@ -18,11 +27,13 @@ nav {
   color: white;
   display: flex;
   justify-content: space-between;
+  margin: 10px;
 }
 
 nav ul li {
   list-style-type: none;
-  padding: 0 10px;
+  margin: auto;
+  padding: 10px;
   background-color: black;
 }
 
@@ -30,6 +41,7 @@ nav ul {
   display: flex;
   background-color: black;
   padding: 0;
+  margin: 0;
 }
 
 nav a {
@@ -43,7 +55,7 @@ nav a:hover {
   color: silver;
 }
 
-.logo img {
+.logo img, .pickImg img {
   text-align: center;
   padding: 5px;
   width: 500px;
@@ -51,6 +63,7 @@ nav a:hover {
 
 .underLogo {
   border: solid 5px black;
+  margin: 25px;
   padding: 15px;
   background-color: white;
   text-align: justify;
@@ -64,6 +77,7 @@ nav a:hover {
 .albums li {
   list-style-type: none;
   width: 50%;
+  
 }
 
 .songCard, .highscoreCard {
@@ -74,8 +88,9 @@ nav a:hover {
   border: solid 3px black;
 }
 
-.songCard {
+.songCard img {
   text-align: center;
+  width: 200px;
 }
 
 .highscoreCard {
@@ -95,6 +110,10 @@ nav a:hover {
   display: table-cell;
 }
 
+.questions {
+  padding: 10px;
+}
+
 .results {
   background-color: white;
   align-items: center;
@@ -102,7 +121,15 @@ nav a:hover {
   margin-bottom: 25px;
 }
 
-.answersList {
+/* .answersList {
   background-color: white;
+  border: solid 3px black;
+} */
+
+.answerCard {
+  background-color: white;
+  display: inline-block;
+  padding: 15px;
+  margin: 10px;
   border: solid 3px black;
 }

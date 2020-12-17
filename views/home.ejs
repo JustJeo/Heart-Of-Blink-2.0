@@ -1,11 +1,11 @@
 <!-- This is the Home Page! -->
 <div class = "logo">
-  <img src = "https://fontmeme.com/permalink/201210/d3b4394735a5c7007ffcc67e21f02c76.png">
+  <img src = "https://fontmeme.com/permalink/201217/89c55b630161c0d8f596679a692561dd.png" alt = "Heart Of Blink Logo">
 </div>
 <div class = "underLogo">
   <div class = "howTo">
     <h2>How The Game Works!</h2>
-    <p>If you're a big fan of the k-pop group BlackPink you'll know that their fans are called "Blinks"! If you think you've got the heart of Blink then test your skills with this lyric game!</p>
+    <p>If you're a big fan of the k-pop group BLACKPINK you'll know that their fans are called "Blinks"! If you think you've got the heart of Blink then test your skills with this lyric game!</p>
     <p>Blinks will have to answer 10 fill in the blank questions. Each question will show a small snippet of lyrics that must be answered in English.</p>
   </div>
   <div class = "rules">
@@ -18,13 +18,16 @@
     </ul>
   </div>
   <div class = "albums">
-    <h2>BLACKPINK Albums</h2>
-    <ul>
-      <% for(let i = 0; i < album.length; i++) { %>
-        <li><%= album[i].albumName %></li>
-        <li><img src = "<%- album[i].coverArt %>"></li>
-      <% } %>
-    </ul>
+    <h2><span>BLACKPINK</span> Albums</h2>
+    <div class="container">
+      <div class="row">
+        <% for(let i = 0; i < album.length; i++) { %>
+          <div class="col-3">
+            <img src = "<%- album[i].coverArt %>">
+          </div>
+        <% } %>
+      </div>
+    </div>
   </div>
 </div>
 
