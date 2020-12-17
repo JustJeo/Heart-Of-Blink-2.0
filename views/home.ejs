@@ -19,12 +19,15 @@
   </div>
   <div class = "albums">
     <h2><span>BLACKPINK</span> Albums</h2>
-    <ul class="list-group list-group-horizontal"></ul>
-      <% for(let i = 0; i < album.length; i++) { %>
-        <li><%= album[i].albumName %></li>
-        <li><img src = "<%- album[i].coverArt %>"></li>
-      <% } %>
-    </ul>
+    <div class="container">
+      <div class="row">
+        <% for(let i = 0; i < album.length; i++) { %>
+          <div class="col-3">
+            <img src = "<%- album[i].coverArt %>">
+          </div>
+        <% } %>
+      </div>
+    </div>
   </div>
 </div>
 
