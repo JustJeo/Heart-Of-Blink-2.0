@@ -8,7 +8,7 @@
   <% for(let i = 0; i < 10; i++) { %>
     <div class="answerCard">
       <label><%= blink.lyrics[i].questionMessage %></label>
-      <p>The correct answer is: <b></b><%= blink.lyrics[i].questionAnswer %></p>
+      <p>The correct answer is: <u><%= blink.lyrics[i].questionAnswer %></u></p>
       <% let answer = `lyric${blink.lyrics[i].id}` %>
       <p>You entered: <%= blink.playerAnswer[answer] %></p>
       <% console.log(blink.lyrics[i].id) %>

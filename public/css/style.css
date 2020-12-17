@@ -12,6 +12,14 @@ body {
   font-weight: 700;
 }
 
+p {
+  margin: 10px;
+}
+
+u {
+  color: limegreen;
+}
+
 img {
   width: 300px;
   padding: 10px;
@@ -20,6 +28,10 @@ img {
 span {
   font-size: 1.25em;
   font-weight: bolder;
+}
+
+label {
+  padding: 10px;
 }
 
 nav {
@@ -33,7 +45,7 @@ nav {
 nav ul li {
   list-style-type: none;
   margin: auto;
-  padding: 10px;
+  padding: 20px;
   background-color: black;
 }
 
@@ -112,6 +124,8 @@ nav a:hover {
 
 .questions {
   padding: 10px;
+  align-items: center;
+  text-align: justify;
 }
 
 .results {
@@ -132,4 +146,42 @@ nav a:hover {
   padding: 15px;
   margin: 10px;
   border: solid 3px black;
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 1500px) {
+  .logo img, .pickImg img {
+    text-align: center;
+    padding: 5px;
+    width: 400px;
+  }
+
+  img {
+    width: 200px;
+    padding: 10px;
+  }
+  .questions {
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .logo img, .pickImg img {
+    text-align: center;
+    padding: 5px;
+    width: 300px;
+  }
+
+  img {
+    width: 250px;
+    padding: 10px;
+  }
+
+  .questions {
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
 }
