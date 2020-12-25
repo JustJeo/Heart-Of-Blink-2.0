@@ -301,18 +301,21 @@ module.exports = {
       },
       {
         questionMessage: "Coming Soon!",
+        questionAnswer: "Coming Soon!",
         songId: 7,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "Coming Soon!",
+        questionAnswer: "Coming Soon!",
         songId: 8,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "Coming Soon!",
+        questionAnswer: "Coming Soon!",
         songId: 9,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -389,180 +392,210 @@ module.exports = {
       },
       {
         questionMessage: "Coming Soon!",
+        questionAnswer: "Coming Soon!",
         songId: 11,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "Coming Soon!",
+        questionAnswer: "Coming Soon!",
         songId: 12,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "Coming Soon!",
+        questionAnswer: "Coming Soon!",
         songId: 13,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "Coming Soon!",
+        questionAnswer: "Coming Soon!",
         songId: 14,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "Come a little closer cause you looking ____",
+        questionAnswer: "thirsty",
         songId: 15,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "Look so good yeah look so ____",
+        questionAnswer: "sweet",
         songId: 15,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "____ on my wrist so he call me ice cream",
+        questionAnswer: "diamonds",
         songId: 15,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "Ice cream chillin chillin, Ice cream ____",
+        questionAnswer: "chillin",
         songId: 15,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "You're the ____ piece just stay on top of me",
+        questionAnswer: "Coming Soon!",
         songId: 15,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "Looking good enough to ____",
+        questionAnswer: "Coming Soon!",
         songId: 15,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "Chillin like a ____ yeah ra ra ra",
+        questionAnswer: "Coming Soon!",
         songId: 15,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "Keep it movin' like my ____ up",
+        questionAnswer: "Coming Soon!",
         songId: 15,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "Mona Lisa kinda ____",
+        questionAnswer: "Coming Soon!",
         songId: 15,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "____ on my wrist yeah I like it like this",
+        questionAnswer: "Coming Soon!",
         songId: 15,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "And I'm nice with the ____ if you know what I mean",
+        questionAnswer: "Coming Soon!",
         songId: 15,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "Coming Soon!",
+        questionAnswer: "Coming Soon!",
         songId: 16,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "Coming Soon!",
+        questionAnswer: "Coming Soon!",
         songId: 17,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "What can we ____",
+        questionAnswer: "Coming Soon!",
         songId: 18,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "But I don't ____, I'll do it over and over",
+        questionAnswer: "Coming Soon!",
         songId: 18,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "We are the ____ girls",
+        questionAnswer: "Coming Soon!",
         songId: 18,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "No love ____, no X and O's",
+        questionAnswer: "Coming Soon!",
         songId: 18,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "Didn't wanna be a ____, I'm priceless",
+        questionAnswer: "Coming Soon!",
         songId: 18,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "A ____ not even on my list",
+        questionAnswer: "Coming Soon!",
         songId: 18,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "____ is a drug that I quit",
+        questionAnswer: "Coming Soon!",
         songId: 18,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "No ____ could help when I'm lovesick",
+        questionAnswer: "Coming Soon!",
         songId: 18,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "Yeah we were born to be ____",
+        questionAnswer: "Coming Soon!",
         songId: 18,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "But we're ____ looking for love.",
+        questionAnswer: "Coming Soon!",
         songId: 18,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "Coming Soon!",
+        questionAnswer: "Coming Soon!",
         songId: 19,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "Coming Soon!",
+        questionAnswer: "Coming Soon!",
         songId: 20,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         questionMessage: "Coming Soon!",
+        questionAnswer: "Coming Soon!",
         songId: 21,
         createdAt: new Date(),
         updatedAt: new Date()
