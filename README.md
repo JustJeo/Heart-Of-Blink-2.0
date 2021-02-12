@@ -1,9 +1,9 @@
-# Heart Of Blink
+# Heart Of Blink 2.0
 If you're a big fan of the k-pop group BLACKPINK you'll know that their fans are called "Blinks" and if you think you've got the true heart of a Blink then you'll master this lyric game! The game is fill-in-the-blank style and players will have to answer 10 questions of lyrics. The clues of lyrics are from parts of the song that are sung in English or Korean lyrics written as romanticized Korean using the English alphabet, but the answer that the player will want to match is an English word.
 
-In this 1.0 version of the game, not all songs are complete and ready to be played...yet. With practicality in mind, doing a game for every single song the group released, within the span of a week, wasn't do-able, but a majority of the group's mainstream songs are available to play!
-
 If you think you've got a Heart of Blink and know BLACKPINK's songs 100%, put your knowledge to the test so you can finally shout "There's a Blink in your area!"
+
+In this 2.0 version of the game all songs as of Feb 2021 will be playable and readily available for users to play.
 
 ![HomePage](public/images/HomePage.png)
 
@@ -20,9 +20,14 @@ If you think you've got a Heart of Blink and know BLACKPINK's songs 100%, put yo
 ## Motivation
 For the final project of my bootcamp cohort, I knew I wanted to build a game. Though it wasn't my original plan, I knew that deep down, it was what I wanted to do. My love for k-pop was also a big factor in my decision making process. I have been a fan of Korean pop music (K-pop) for over 7 years now and with its publicity increasing in 2020, I found this as the perfect time to build a game that includes one of the biggest K-Pop groups known in America. Even though BLACKPINK is not my absolute favorite K-pop group, I knew that if I wanted to do a game about lyrics, it had to be a group that had many English lines in their songs. With 3/4 members of BLACKPINK fluent in English and have lived abroad before becoming musicians, they were a no brainer with which group to choose for this project.
 
+I wanted to make a 2.0 version of this game so that I could have a preserved version of my final [1.0] and a complete version of the game where every song is playable and has questions that players can click on. I know that I would be able to make a separate branch in the original file of the game, but with myself still being too much of a novice, I didn't want to risk the chance of accidentally overriding my original version. Having two sepearate files is eaier to me.
+
 ## Technologies Used
-- Postgres
-- Express
+- HTML
+- CSS
+- JavaScript
+- PostgreSQL
+- Express.js
 - Node.js
 - Bootstrap
 
@@ -66,8 +71,7 @@ I also want to thank a few classmates that have helped and supported me through 
 - Casey Jenkins
 
 ## Future Development
-Due to feasability and the time constraint, I had to cut back on a few features that eventually became stretch goals. In the future I plan on revisiting this project and implementing everything I had to cut out for the first version. These features included:
+Now that I am revisiting this project for the 2.0 version, I wanted to look back to the features that I had to cut back on. I will slowly implement these changes into the final version when I am confident that they are in working order. These features included:
 
-- Having every single song be playable. I had to choose a few mainstream songs for now, but I do plan on making every song available to a player
-- Inserting a scoring and high score feature that logs a player's score and displays them on the high score board
+- Inserting a scoring and high score feature that logs a player's score and displays them on a high score board.
 - Making a multiple choice feature for players to choose one option from 4 different answers.
